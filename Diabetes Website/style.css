@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#hero{
+    background-color: black;
+}
+#image{
+    background-image: url('../img/pexels-karolina-grabowska-4386466.jpg');
+    background-size: cover;
+    min-height: 700px;
+    opacity: 0.4;
+    animation: fade 4s linear infinite;
+}
+
+@keyframes fade{
+    0%{
+        background-image: url('../img/pexels-karolina-grabowska-4386466.jpg');
+    }
+    50%{
+        background-image: url('../img/a.jpg');
+    }
+}
+.nav-bar{
+         display: flex;
+        justify-content: space-between;
+        background-color: #b8f3f5a1;
+        padding: 0.8rem;
+        color:black;
+        font-size: x-large;
+        
+}
+.menu,a{
+   padding-left: 1rem;
+   /* padding-right: 2rem; */
+   font-size: 1.2rem;
+   display: flex;
+   text-align: center; 
+   text-decoration: none;
+}
+.menu li{
+    list-style: none;
+}
+.social {
+    font-size: 1.1rem;
+    display: flex;
+    
+    gap: 1rem;
+}
