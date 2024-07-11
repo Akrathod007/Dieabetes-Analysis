@@ -1,0 +1,394 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+
+}
+
+.mySlides {
+  position: relative;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#desc {
+  position: absolute;
+  width: 900px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+#desc h1 {
+  color: white;
+  font-size: 50px;
+}
+#desc p {
+  color: dodgerblue;
+  font-size: 20px;
+}
+/*  */
+#desc button {
+  padding: 18px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  width: 180px;
+}
+#desc button:hover {
+  background-color: beige;
+  color: red;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+#nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: dodgerblue;
+  /* position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; */
+}
+#nav h1 {
+  color: white;
+}
+#links {
+  display: flex;
+  list-style: none;
+  gap: 23px;
+}
+#links a {
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+}
+
+#links a:hover {
+  color: red;
+  border-bottom: 1px solid red;
+  border-top: 1px solid red;
+  transition-duration: 0.5s;
+}
+
+#icons {
+  display: flex;
+  gap: 20px;
+  color: white;
+}
+#icons i {
+  font-size: 18px;
+}
+#icons i:hover {
+  color: red;
+  transition-duration: 0.5s;
+}
+
+#additional-info h2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 4rem;
+  color: dodgerblue;
+  text-decoration: underline;
+}
+#additional-info p {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: red;
+}
+
+.info-image {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  border-radius: 50%;
+  margin: 40px 0;
+  animation: move both;
+  animation-timeline: view();
+}
+
+@keyframes move {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.info-text {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  gap: 10px;
+  justify-content: space-between;
+  animation: move both;
+  animation-timeline: view();
+}
+#box1,
+#box2,
+#box3 {
+  border: 1px solid red;
+  width: 33%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+#box1 h3 {
+  text-align: center;
+  font-size: 2rem;
+  color: dodgerblue;
+}
+#box1 p {
+  text-align: justify;
+}
+#box2 h3 {
+  text-align: center;
+  font-size: 2rem;
+  color: dodgerblue;
+}
+#box2 p {
+  text-align: justify;
+}
+#box3 h3 {
+  text-align: center;
+  font-size: 2rem;
+  color: dodgerblue;
+}
+#box3 p {
+  text-align: justify;
+}
+
+#read-btn {
+  border: 1px solid red;
+  width: 170px;
+  display: flex;
+  justify-content: center;
+  background-color: red;
+}
+#read-btn a {
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+}
+
+#read-btn:hover {
+  transform: scale(1.1);
+  transition: 0.7s;
+}
+
+#up-btn {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: dodgerblue;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#up-btn a {
+  text-decoration: none;
+  padding: 20px;
+}
+#up-btn i {
+  color: white;
+  font-size: 20px;
+}
+
+#bmi-container {
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+}
+#bmi {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 7%;
+}
+#bmi img {
+  width: 90%;
+  animation: movement 2s linear infinite;
+}
+#bmi-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+#bmi-desc h3 {
+  font-size: 70px;
+  color: dodgerblue;
+}
+#bmi-desc p {
+  font-size: 23px;
+}
+@keyframes movement {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(40px);
+  }
+}
+#bmi-analysis {
+  width: 90%;
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+#bmi-analysis img {
+  width: 50%;
+}
+#bmi-analysis p {
+  font-size: 30px;
+}
+
+#show-powerbi-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#show-powerbi-btn:hover {
+  background-color: #0056b3;
+}
+
+.iframe-container {
+  position: relative;
+  margin-top: 20px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.btn-show{
+  border: none;
+  padding: 15px 40px;
+  margin-top: 20px;
+  background-color: dodgerblue;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  
+}
+
+#bmi-dashboard li{
+  font-size: 1.4rem;
+}
+.main-text {
+  text-align: center;
+  margin: 50px 0px;
+  color: #1e90ff;
+  font-size: 40px;
+  text-decoration: underline;
+}
+
+/* Footer Styling */
+
+
+ #footer{
+  background-color: gray;
+  width: 100vw;
+  display: flex;
+  padding: 20px;
+  overflow-x: hidden;
+  justify-content: space-between;
+  /* margin: -120px; */
+} 
+
+#section-1,#section-2,#section-3{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+}
+
+#section-1 h1{
+  color: darkorange;
+  font-size: 40px;
+}
+#section-1 p{
+  color: white;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+#section-2{
+  margin-left: 40px;
+}
+#section-2 h1{
+  color: darkorange;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+#section-2 ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#section-2 a:hover{
+    color: orange;
+    border-top: 1px solid orange;
+    border-bottom: 1px solid orange;
+}
+#section-2 a{
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+#section-3 h1{
+  color: darkorange;
+  font-size: 40px;
+}
+
+#section-3 p{
+  font-size: 20px;
+  color: white;
+}
+#section-3 textarea{
+  padding: 10px;
+}
